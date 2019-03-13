@@ -6,6 +6,13 @@ ESP8266-01 mit DHT sensor überträgt die Daten an MQTT Broker.
 NodeMCU mappt die ESP Pins:  PIN MAP:   GPIO0->PIN 3    GPIO2->PIN 4
 DHT Data Pin MUSS GPIO2 sein, weil auch DHT schläft mit GND auf Data Pin! Dies führt zu FlashMode nach einem aufwachen des ESP´s
 
+-----     Firmware.bin     -----
+
+Die Firmware.bin wurde mithilfe von  https://nodemcu-build.com/  erstellt.
+Es sind mehr Bibiolotheken vorhanden als momentan verwendet. Unbedingt notwendig sind die zusätzlichen
+Bibilotheken:  "MQTT, enduser, DHT, file"
+
+
 -----     init.lua     -----
 
 Diese init.lua unterstützt einen Debug Modus. Entweder direkt im Code aktvierbar mit Debug="ON".
