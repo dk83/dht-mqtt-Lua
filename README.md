@@ -2,10 +2,12 @@
 ESP8266-01 mit DHT sensor überträgt die Daten an MQTT Broker.
 
 -----     Generelle NodeMCU Informationen     -----
+
 NodeMCU mappt die ESP Pins:  PIN MAP:   GPIO0->PIN 3    GPIO2->PIN 4
 DHT Data Pin MUSS GPIO2 sein, weil auch DHT schläft mit GND auf Data Pin! Dies führt zu FlashMode nach einem aufwachen des ESP´s
 
 -----     init.lua     -----
+
 Diese init.lua unterstützt einen Debug Modus. Entweder direkt im Code aktvierbar mit Debug="ON".
 Oder eine Datei mit dem Namen   debug   befindet sich im Speicher des ESP8266.
 
@@ -32,6 +34,7 @@ Dort könen Variablen definiert werden die sich seit dem ersten einspielen des P
 
 
 -----     Gemessene Werte:     -----
+
 Verwendete Bauteile:  ESP8266-01 mit DeepSleep Modus ohne Rote LED. DHT22 mit 10 Kohm zwischen Vcc-Data.
 
 Geräte:      DeepSleep=0,12mA      RunTime=100mA (Annahme, da WiFi connect = 280mA über wenige ms)
