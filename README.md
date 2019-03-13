@@ -9,8 +9,9 @@ DHT Data Pin MUSS GPIO2 sein, weil auch DHT schläft mit GND auf Data Pin! Dies 
 -----     Firmware.bin     -----
 
 Die Firmware.bin wurde mithilfe von  https://nodemcu-build.com/  erstellt.
-Es sind mehr Bibiolotheken vorhanden als momentan verwendet. Unbedingt notwendig sind die zusätzlichen
-Bibilotheken:  "MQTT, enduser, DHT, file"
+Es sind mehr Bibiolotheken vorhanden als momentan verwendet.
+Modules in Firmware.bin: dht,enduser_setup,file,gpio,http,mqtt,net,node,tmr,uart,wifi
+Unbedingt notwendig sind die zusätzlichen Bibilotheken:  "MQTT, enduser, DHT, file"
 
 
 -----     init.lua     -----
