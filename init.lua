@@ -21,7 +21,7 @@ wifi.setphymode(wifi.PHYMODE_N); wifi.sta.sethostname(HOST); wifi.setmode(wifi.S
 wifi.sta.connect(); -- Connect Wlan	
 Time={};
 Time.Start=150; 	-- Time.Start In ms, ~500 ms Start verzögerung; Verwendet für Script Start. Bei Debug=="OFF" verwendet als GetWifiOrAP() Verzögerung; Mosquitto-KeepAlive timeout;
-Time.Offline=10;  	-- In Sekunden: MIN: 10 s  Nach dieser Zeit wird der AP gestartet. BEI DEBUG=="ON" verwendet als:  GetWifiOrAP() Verzögerung; Power_OFF() Verzögerung; Mosquitto-KeepAlive timeout;
+Time.Offline=12;  	-- In Sekunden: MIN: 10 s  Nach dieser Zeit wird der AP gestartet. BEI DEBUG=="ON" verwendet als:  GetWifiOrAP() Verzögerung; Power_OFF() Verzögerung; Mosquitto-KeepAlive timeout;
 Time.AP=2;			-- In Minuten; WENN der Access Point gestartet wird, bleibt dieser solange an
 ------------------------------
 function BUG(txt) if Debug == "ON" then print("- "..txt); return true; end; end
