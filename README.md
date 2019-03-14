@@ -7,12 +7,14 @@ NodeMCU mappt die ESP Pins:  PIN MAP:   GPIO0->PIN 3    GPIO2->PIN 4
 DHT Data Pin MUSS GPIO2 sein, weil auch DHT schläft mit GND auf Data Pin! Dies führt zu FlashMode nach einem aufwachen des ESP´s
 
 Linux User:
+
 Flash Firmware.bin mit esptool.py   
-Upload init.lua mit   nodemcu-uploader oder ?
+Upload init.lua mit   nodemcu-uploader oder ?   
 
 Windows User:
-Flash Firmware.bin mit  https://github.com/nodemcu/nodemcu-flasher    oder ?
-Upload init.lua mit     http://benlo.com/esp8266/    oder ?
+
+Flash Firmware.bin mit  https://github.com/nodemcu/nodemcu-flasher    oder ?  
+Upload init.lua mit     http://benlo.com/esp8266/    oder ?  
 
 -----     Firmware.bin     -----
 
