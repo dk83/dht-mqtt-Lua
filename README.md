@@ -56,9 +56,14 @@ Stromaufnahme:
 (ESP8266-01(DeepSleep) + DHT22(schläft)  ~  DSleep = 0,12mA
 RunTime=100mA (Annahme, da WiFi connect = 280mA über wenige ms)
 
+-------------------------------------------------------------------------------------------------------
+
 Laufzeit: Gemessen wurden Verbindungs Werte (Debug="OFF") zwischen Mindestens: <3,5s Maximal: <8s
 
 4 * Lesen Pro Stunde = 4*3,5s= 14s (Runtime) ~ 0,39mAh
+
 3600s - 14s(Runtime) = 3586s bei ca 0,119mAh
+
 Verbrauch pro Stunde:  (14s Runtime)+(3586s DeepSleep) = ((100mA/3600s)*14s) + ((0,12mA/3600)*3586s) = 0,389mAh + 0,119mAh = 0,508mAh
+
 (500mAh/0,508mAh) ~ 984h ~ 41 Tage
