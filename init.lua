@@ -6,7 +6,7 @@ Version="1.2";
 HOST="outdoor";		-- HostName benutzt als: Host Name, MQTT-Client Name, und als Access Point Name
 DSleep = "1"		-- In Minuten Deep Sleep Countdown (MAX DeepSleep Time < 71 Minuten )
 -- MQTT Konfiguration
-BROKER = "server.h" 		-- Broker -> IP | HostName
+BROKER = "server" 		-- Broker -> IP | HostName
 USER=""
 PWD=""
 QoS = "0"					-- QoS:   0: „Fire-and-forget“  ||  1: „Acknowledgement“(Erwartet Bestätigung)  ||  2: „Synchronisiert“ (Viel Traffic)
