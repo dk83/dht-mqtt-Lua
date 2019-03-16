@@ -31,7 +31,7 @@ function BUG(txt) if Debug == "ON" then print("- "..txt); return true; end; end
 function setup()
 	tmr.alarm(1, 50, 1, function() status, temp, humi = dht.read(4); if status == dht.OK then tmr.stop(1); MSG='{ "C": "'..temp..'", "rH": "'..humi..'", "mV": "'..adc.readvdd33(0)..'" }'; BUG("\n- DHT gelesen:  Temperature: "..temp.."C  Humidity: "..humi.."rH  \t\t (Laufzeit: "..math.floor(tmr.now()/1000).."ms)"); end; end)
 	tmr.alarm(2, 80, 1, function() if wifi.sta.getip() then tmr.stop(1); tmr.stop(2); tmr.stop(3); main(); end	end) 	-- "ONLINE Check, In Millisekunden"			
-	tmr.alarm(3, math.floor(Time.Offline*1000), 0, function() tmr.stop(1); tmr.stop(2); tmr.stop(3); if wifi.sta.getip() == nil then dofile("AP.lc"); end end)  	-- In Sekunden, MIN: ~ 5s:  Viel zu lange OFFLINE -> AP()
+	tmr.alarm(3, math.floor(Time.Offline*1000), 0, function() tmr.stop(1); tmr.stop(2); tmr.stop(3); if wifi.sta.getip() == nil then if file.exists("AP.lc") then dofile("AP.lc"); end end end)  	-- In Sekunden, MIN: ~ 5s:  Viel zu lange OFFLINE -> AP()
 	
 	if Debug == "ON" then
 		print("\n   \[ Starte ESP:  Time.Start: "..Time.Start.." ms  ->  | MAIN |  ->   Publish  ->  |Subscribe OR DSleep| \]");
